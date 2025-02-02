@@ -1,0 +1,411 @@
+        .post-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px 0 rgba(0,0,0,.15);
+            padding: 20px;
+            box-sizing: border-box;
+
+        }   
+
+        .post-header {
+            border-bottom: 1px solid #e6e6e6;
+            margin-bottom: 10px;
+            padding-bottom : 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .post-title {
+            margin-left: 0px;
+            margin-right: 0px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+            width: 700px;
+        }
+
+        .post-info {
+            font-size: 0.6em;
+            color: #999;
+            margin : 0px;
+            flex-shrink: 1; /* 화면 크기가 줄어들 때 축소될 수 있도록 설정 */
+            width: 200px;
+            height: 35px;
+            padding-top: 5px;
+            padding-right: 5px;
+        }
+
+        .post-content {
+            color: #333;
+            line-height: 1.6;
+            padding: 20px 1px;
+            min-height: 165px;
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+            overflow: auto;
+        }
+
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .post-content p{
+            color: #333;
+            line-height: 1.6;
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        }
+
+        .post-likes, .post-date {
+            margin-left: 10px; /* 라벨 사이에 간격을 줍니다 */
+        }
+
+        #view-count{
+            margin-right: 5px;
+        }
+
+        .post-author {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+            margin: 0px;
+            height: 35px;
+            float: right;
+        }
+
+        .post-likes{
+            font-size: 14px;
+            color: #666;
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+            width: 100px;
+            float:right;
+        }
+
+        .post-date {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+            width: 150px;
+            margin: 0px;
+            float: left;
+        }
+
+        .post_watched_date{
+            width: 260px;
+            margin: 0px;
+            height: 35px;
+            padding-top: 5px;
+        }
+
+        .post_watched_date_notice {
+            width: 160px;
+            margin: 0px;
+            height: 35px;
+            padding-top: 5px;
+        }
+
+        .comments {
+            margin-top: 30px;
+        }
+
+        .comment {
+            border-bottom: 1px solid #c9c8c8;
+            padding-bottom: 10px;
+            margin-bottom: 20px;    
+        }
+
+        .comment-author {
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+            flex: 1; /* 남은 공간을 차지하도록 설정 */
+            display: flex;
+            align-items: center; /* 세로 중앙 정렬 */
+            position: relative;
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        }
+
+        .comment-text {
+            color: #333;
+            margin: 8px 0;
+        }
+
+        .comment-date {
+            font-size: 0.8em;
+            color: #666;
+            padding-right: 890px;
+        }
+        .comment-date_2 {
+            font-size: 0.8em;
+            color: #666;
+            padding-right: 920px;
+        }
+
+        /* 댓글 입력 창 스타일 */
+        #comment-input {
+            width: calc(100% - 80px);
+            padding: 10px;
+            border:1px solid #ccc;
+            border-radius: 5px;
+            float: left;
+        }   
+
+        #comment-input input,
+        #comment-input textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .add-comment button {
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: -63px;
+            float: right;
+        }
+
+        #comment-input button:hover {
+            background-color: #0056b3;
+        }
+
+        .add-comment {
+            width: 96%; 
+            box-sizing: border-box; 
+            padding: 10px; 
+            border-radius: 5px;
+            margin-bottom: 30px;
+            margin-top: 10px;
+            margin-left: -10px;
+        }
+
+
+        .comments .d1{    
+            text-align: left;
+            font-size: 16px;
+            color: #000;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #444444;
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        }
+
+        .btn_dark_write1 { 
+            display: inline-block; 
+            padding: 8px 24px; 
+            font-size: 14px;
+            background-color: #fff; 
+            color: #000; 
+            border: 1px solid #ccc; 
+            cursor: pointer; 
+            text-decoration: none; 
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+            margin-right: 5px;
+        }
+
+        .btn_dark_write2 { 
+            display: inline-block; 
+            padding: 8px 24px; 
+            font-size: 14px; 
+            background-color: #333; 
+            color: #fff; 
+            border: 1px solid #ccc;
+            cursor: pointer; 
+            text-decoration: none; 
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+            margin-right: 5px;
+        }
+
+        .btn_dark_write8 { 
+            display: inline-block; 
+            padding: 8px 24px; 
+            font-size: 14px;
+            background-color: #e55c5c;
+            color: #fff; 
+            border: 1px solid #ccc; 
+            cursor: pointer; 
+            text-decoration: none; 
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+            margin-right: 5px;
+        }
+        .btn_dark_write3 { 
+            display: inline-block; 
+            padding: 0px 9px; 
+            font-size: 24px;
+            background-color: #fff; 
+            color: #000; 
+            cursor: pointer; 
+            text-decoration: none; 
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        }
+        .btn_dark_write_4 { 
+            display: inline-block; 
+            padding: 3px 15px; 
+            font-size: 14px;
+            background-color: #fff; 
+            color: #000; 
+            cursor: pointer; 
+            text-decoration: none; 
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        }
+        .recommend-button {
+            cursor: pointer;
+            font-size: 16px;
+            position: relative;
+            background-color: white;
+            margin-right: 5px;
+            background-color: white;
+            margin-left: 5px;
+        }
+        .recommend-button1 {
+            cursor: pointer;
+            font-size: 16px;
+            position: relative;
+            background-color: white;
+            background-color: white;
+        }
+
+        .recommend-count {
+            vertical-align: middle;
+            text-align: center;
+            font-size: 14px;
+            color: red;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .recommend-button img {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 12px;
+            margin-top: -3px;
+        }
+        .recommend-button1 img {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 12px;
+            margin-top: -3px;
+        }
+        .recommend-icon {
+            margin-left: -1px;
+            margin-right: -13px;
+        }
+        .recommend-icon1 {
+            margin-left: 568px;
+            margin-right: -13px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* 닫기 버튼의 스타일 */
+        .modal_close_login_01 .modal_close_signup{
+            color: #555;
+            float: right;
+            font-size: 28px;
+            margin: -20px -20px 0 0;
+            background-color: #ffffff;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: absolute;
+            top: 0px;
+            right : 31px;
+        }
+
+        .comment_wrap {
+            margin-top: 25px;
+        }
+
+        .regi_box {
+            position: relative;
+            background: #fff;
+            border-radius: 10px;
+            border: 1px solid #D9D9D9;
+            min-height: auto;
+        }
+
+        .commentFrm input {
+            overflow: visible;
+        }
+
+        .regi_box .text_overflow {
+            padding: 13.5px 100px 13.5px 20.5px;
+            overflow: hidden;
+        }
+
+        .regi_box textarea {
+            font-size: 15px;
+            line-height: 22px;
+            border: none;
+            background: transparent;
+            padding: 0;
+            outline: none;
+            resize: none;
+            width: 100%;
+            color: #000;
+        }
+
+        .regi_box button:before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 60px;
+            background: #D9D9D9;
+        }
+
+        .regi_box [id ^= regi_count] {
+            text-align: right;
+            line-height: 0;
+            margin-top: 20px;
+        }
+
+        .regi_box button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            padding: 0 18.5px 0 16px;
+            color: #6B6B6B;
+            background-color: #fff;
+        }
+
+        .comment .modal_close_login:hover,
+        .comment .modal_close_login:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        /* .comment-date {
+            font-size: 0.8em;
+            color: #666;
+            flex: 0; /* 내용에 따라 크기 조절되도록 설정 */
+            /* white-space: nowrap; 긴 텍스트가 줄 바꿈되지 않도록 설정 */
+            /* overflow: hidden;
+        } */ 
+
+        .cooperation-box     {
+            display: inline-block;
+            background-color: #f0f0f0;
+            color: #000;
+            font-size: 12px;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        

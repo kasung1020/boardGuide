@@ -1,0 +1,617 @@
+    /* 전체 박스 비율 100% 맞춰서 다른 화면에서 똑같이 출력하게 만들 생각 */
+    .bigpicture2 {
+        width: 1200px;
+        height: 1080px;
+    }
+
+    /* 전체 박스 안에 박스를 넣어 본격적인 박스를 만들 공간을 줌 */
+    .bigborder {
+        width: 100%;
+        height: 1080px;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+        /* 가로 방향으로 중앙 정렬 */
+        flex-wrap: wrap;
+        /* 요소들이 감싸지도록 설정 */
+        margin-top: 10px;
+    }
+
+    #game_all_rank_main{
+        height: auto;
+    }
+
+    .sortcontent{
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+
+    /* 너비 100% 설정을 위한 공통 클래스 없어도 됌*/
+    .full_width {
+        width: 100%;
+    }
+
+    /* 기본 폰트 크기 설정 없어도 됌 */
+    .font_size_1 {
+        font-size: 1em;
+    }
+
+    /* -------정렬 박스----- */
+    .filter_panel_card_close {
+        /* 그림자 추가: 아래로 2px 이동, 8px 블러, 색상은 투명한 검은색 */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+        /* 배경색을 흰색으로 설정 */
+        background-color: #fff;
+        min-width: 220px;
+        width: 220px;
+        border: 1px solid #e3e3e3;
+        border-radius: 8px;
+        /* 플렉스박스 레이아웃 적용: 자식 요소들을 플렉스 아이템으로 취급 */
+        display: flex;
+        /* 플렉스 아이템이 컨테이너의 너비를 초과하면 다음 줄로 감싸짐 */
+        flex-wrap: wrap;
+        /* 플렉스 아이템 사이에 동일한 간격을 추가 */
+        justify-content: space-between;
+        /* 요소의 경계를 초과하는 콘텐츠를 숨김 */
+        overflow: hidden;
+    }
+
+    /* 여기서부터는 화살표 아래로 눌렀을때 나오는 박스 */
+    /* 열었을때 박스 위치 조정 및 뒷 배경색 지정*/
+    .widget.dropdown_widget {
+        position: relative;
+        border: 1px solid #ccc;
+        background-color: #fff;
+    }
+
+    /* 열었을때 박스 텍스트와 아이콘을 위치 조정 */
+    .dropdown_wrap {
+        display: flex;
+        /* 플렉스박스 레이아웃 사용 */
+        justify-content: space-between;
+        /* 아이템 간 간격 균등하게 */
+        align-items: center;
+        /* 수직 중앙 정렬 */
+        padding: 8px;
+        cursor: pointer;
+        /* 마우스 커서를 포인터로 변경 */
+    }
+
+    /* 열었을때 박스 placeholder 예제 위치 조정 */
+    .input {
+        flex-grow: 1;
+        /* 나머지 공간을 차지 */
+    }
+
+    /* 열었을때 아이콘 박스 위치 조정 */
+    .select_icon {
+        display: flex;
+        align-items: center;
+    }
+
+    /* 아래로 향하는 화살표 아이콘 생김새 조정 */
+    .arrow_icon {
+        border-left: 5px solid transparent;
+        /* 크기를 늘림 */
+        border-right: 5px solid transparent;
+        /* 크기를 늘림 */
+        border-top: 5px solid #000;
+        /* 화살표 모양의 크기를 늘림 */
+        /* 화살표 모양 생성 */
+    }
+
+    /* 숨겨진 실제 select 요소 스타일 */
+    .widget.dropdown_widget select {
+        width: 100%;
+        border: none;
+        background: transparent;
+        font-size: 1em;
+        cursor: pointer;
+        appearance: none;
+        /* 기본 select 디자인 제거 */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding: 8px;
+        margin: 0;
+        outline: none;
+        position: absolute;
+        /* dropdown_wrap 위에 위치 */
+        top: 0;
+        left: 0;
+        opacity: 0;
+        /* 완전히 투명하게 설정하여 숨김 처리 */
+    }
+
+    /* 여기까지가 화살표 아래로 눌렀을때 나오는 박스 */
+
+    .filter_panel_card {
+        /* 그림자 추가: 아래로 2px 이동, 8px 블러, 색상은 투명한 검은색 */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+        /* 배경색을 흰색으로 설정 */
+        background-color: #fff;
+        min-width: 220px;
+        width: 220px;
+        border: 1px solid #e3e3e3;
+        border-radius: 8px;
+        /* 플렉스박스 레이아웃 적용: 자식 요소들을 플렉스 아이템으로 취급 */
+        display: flex;
+        /* 플렉스 아이템이 컨테이너의 너비를 초과하면 다음 줄로 감싸짐 */
+        flex-wrap: wrap;
+        /* 플렉스 아이템 사이에 동일한 간격을 추가 */
+        justify-content: space-between;
+        /* 요소의 경계를 초과하는 콘텐츠를 숨김 */
+        overflow: hidden;
+        margin-top: 12px;
+    }
+
+    /* 정렬 이름 표시 영역 */
+    .filter_name {
+        width: 100%;
+        height: 52px;
+        /* 높이를 52px로 설정 */
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 14px 24px;
+    }
+
+    .filter_name>h2 {
+        display: inline-flex;
+        font-size: 1.1em;
+        justify-content: space-between;
+        padding-right: 10px;
+        width: 100%;
+        color: #000;
+    }
+
+    .filter>h3 {
+        color: #000;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        align-items: center;
+        width: 100%;
+        font-size: 1em;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+
+    /* 정렬 선택 영역 */
+    .filter {
+        display: none;
+        width: 100%;
+        height: calc(100% - 52px);
+        /* 전체 높이에서 52px을 뺀 나머지를 차지 */
+        border-top: 1px solid #eee;
+        /* 상단 구분선 */
+        padding: 14px 13px 14px 13px
+    }
+
+
+    .person_count {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .person_count label{
+        color: #000;
+    }
+
+    .person_count input[type="number"] {
+        width: 40%;
+        /* 입력 필드 너비 조절 */
+        padding: 8px;
+        /* 패딩 추가 */
+        border: 1px solid #e3e3e3;
+        /* 테두리 스타일 */
+        border-radius: 4px;
+        /* 둥근 모서리 */
+        margin-left: -20px;
+    }
+
+    /* 게임 제목 검색 박스 */
+    .title_search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .title_search input {
+        flex-grow: 1;
+        padding: 8px 5px;
+        border: 1px solid #e3e3e3;
+        border-radius: 4px;
+    }
+
+    .title_search button {
+        margin-top: 35.5px;
+        margin-left: 5px;
+        padding: 9px 12px;
+        border: none;
+        transform: translateY(-50%);
+        background-color: whitesmoke;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    /* 게임 제목 검색 박스 여기까지*/
+
+    /* 난이도 박스 출발 */
+    .difficulty_selection {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0px;
+    }
+
+    .difficulty_option {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .difficulty_label {
+        padding: 5px 7px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+        color: #000;
+    }
+
+    .difficulty_option input[type="radio"] {
+        display: none;
+    }
+
+    .difficulty_option input[type="radio"]:checked+.difficulty_label {
+        background-color: #e3e3e3;
+    }
+
+    /* 난이도 박스 여기까지 */
+
+    /* 테마 선택 박스 출발 */
+    .theme_selection {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .theme_option {
+        margin: 5px 0;
+        color: #000;
+    }
+
+    /* 테마 선택 박스 여기까지 */
+
+    /* 게임순위 박스 */
+    .game_rank_content {
+        border: 1px solid black;
+        background-color: #fff;
+        font-size: 1em;
+        line-height: 1.25;
+        color: #000;
+        border-radius: 4px;
+        width: 900px;
+        padding: 12px 22px;
+        -webkit-text-size-adjust: auto;
+        box-sizing: content-box;
+        margin: 0;
+        height: 1050px;
+    }
+
+    .game_rank_content #game_rank_container {
+        margin: 0 10px 5px;
+    }
+
+    .game_rank_maincontent {
+        height: 1025px;
+        /* !!!!!이거 다 만들면 나중에 삭제할거임 */
+        margin: 0px;
+        padding: 0px;
+    }
+
+    /* a, button 설정 */
+    .game_rank_maincontent a,
+    .apply button {
+        cursor: pointer;
+        text-decoration: none;
+        -webkit-tap-highlight-color: rgba(50, 46, 77, .3);
+        background-color: transparent;
+    }
+
+    .game_rank_content p {
+        margin: 1em 0;
+    }
+
+    .game_rank_maincontent b {
+        font-weight: 600;
+    }
+
+    /* 게임순위 박스 여기까지*/
+
+    /* 페이지 버튼 */
+    .paging {
+        list-style: none;
+        width: 100%;
+    }
+
+    /* 게임 박스 작은 틀 */
+    /* #board-game-rank-container {
+        margin: 10px;
+    } */
+
+    #board-game-rank-container table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    #board-game-rank-container th {
+        padding: 10px 10px;
+        background-color: #4b7fd8; /* Header color */
+        color: #FFFFFF; /* White text for header */
+        letter-spacing: 1px;
+        border-bottom: 2px solid #333;
+    }
+    
+    #board-game-rank-container td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #E0E0E0;
+        color: #333;
+        letter-spacing: 0.5px;
+        transition: background-color 0.3s; /* Transition effect */
+    }
+
+    #board-game-rank-container tr:nth-child(even) {
+        background-color: #F7F7F7; /* Light Gray Background for Even Rows */
+    }
+
+    #board-game-rank-container tr:hover {
+        background-color: #EAEAEA; /* Highlight effect on hover */
+    }
+
+    #board-game-rank-container img {
+        width: 70px;
+        height: 64px;
+        border-radius: 8px; /* Rounded Corners for Images */
+        transition: transform 0.3s;
+    }
+
+    #board-game-rank-container img:hover {
+        transform: scale(1.1); /* Zoom effect on hover */
+    }
+
+    .paging2 {
+        list-style: none;
+        margin: 10px 0 10px 0;
+        width: 100%;
+    }
+
+    .game_rank_maincontent ul li {
+        display: inline-block;
+        margin: 0 5px;
+        font-size: 16px;
+    }
+
+    .game_rank_maincontent ul li a {
+        display: block;
+        width: 18px;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        transition: all 0.3s; /* Smooth Transition */
+    }
+
+    .game_rank_maincontent ul li a:hover {
+        color: #4b7fd8; /* Hover Color Effect */
+        transform: translateY(-3px); /* Slight Move Up effect on hover */
+    }
+    
+    .game_rank_maincontent ul li a.pre-btn,
+    .game_rank_maincontent ul li a.next-btn {
+        width: auto;
+        height: auto;
+        line-height: inherit;
+    }
+
+    .game_rank_maincontent ul li a.on {
+        width: 28px;
+        height: 28px;
+        font-weight: bold;
+        color: #4b7fd8;
+        border: 1px solid #9b9a9a;
+    }
+
+    /* 게임 순위 박스 */
+
+    /* 게임 박스 작은 틀 */
+
+
+    /* 페이지 넘기는 박스 */
+    .pagingbox {
+        position: relative;
+        width: 100%;
+        height: 30px;
+        margin: 0 0 10px 0;
+    }
+
+    /* ---------------필터 검색 창--------------- */
+    /* 필터 검색 창 스타일 */
+    .apply {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        height: 44px;
+    }
+
+    /* 검색 버튼 기본 스타일 */
+    .apply a {
+        color: rgba(0, 0, 0, .5);
+        pointer-events: none;
+        font-size: 16px;
+        /* 비활성화된 버튼을 클릭할 수 없도록 함 */
+    }
+
+    /* 검색 버튼 활성화 스타일 */
+    .apply.active {
+        background-color: rgb(1, 180, 228) !important;
+        /* .apply 배경색을 여기에 추가 */
+    }
+
+    /* 검색 버튼 활성화 스타일 */
+    .apply.active a {
+        color: white !important;
+        pointer-events: auto;
+        /* 활성화된 버튼을 클릭할 수 있도록 함 */
+    }
+
+    .apply.disabled,
+    .apply.disabled:hover {
+        background-color: rgba(228, 228, 228, .7);
+        backdrop-filter: blur(10px);
+    }
+
+    .apply.disabled a {
+        color: rgba(0, 0, 0, .5);
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .ball-scale-multiple {
+        position: relative;
+        transform: translateY(-20px);
+    }
+
+    .load_more {
+        width: 200px;
+        line-height: 40px;
+    }
+
+    /* 여기까지 */
+
+
+    /* gameall */
+    .bigborder2 {
+        margin: 50px;
+        width: 1800px;
+        height: 1050px;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+        /* 가로 방향으로 중앙 정렬 */
+        flex-wrap: wrap;
+        /* 요소들이 감싸지도록 설정 */
+        border: 1px solid black;
+    }
+
+    /* gameall */
+    .bigborder2 {
+        margin: 50px;
+        width: 1800px;
+        height: 1050px;
+        /* border: 1px solid black; */
+        border: 1px solid black;
+    }
+
+    .bigborder2>.top3_title_width {
+        width: 100%;
+        height: 100px;
+    }
+
+
+    .top3_title {
+        color: #000;
+        font: bold;
+        position: relative;
+    }
+
+    .crown_img2 {
+        position: absolute;
+        margin-top: 12px;
+        width: 65px;
+        height: 65px;
+    }
+
+    /* 이미지 사이의 간격 조정 */
+    .center-span {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 10px 0;
+        line-height: 100px;
+        /* 행 사이에 간격을 만들기 위해 마진 추가 */
+    }
+
+    .center_span2 {
+        line-height: 100px;
+        /* 행 사이에 간격을 만들기 위해 마진 추가 */
+    }
+
+    .certer_img{
+        display: flex;
+        /* 플렉스 컨테이너로 만듭니다. */
+        justify-content: space-between;
+        /* 항목을 가로로 정렬하고 사이 간격을 추가합니다. */
+        align-items: center;
+        /* 항목을 수직으로 가운데 정렬합니다. */
+        padding-top: 20px;
+        /* 필요에 따라 패딩을 조정하세요. */
+        width: 100%;
+    }
+
+    .center_span3{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* 게임 이미지와 제목 스타일링 */
+    .img_ad2,
+    .img_gm {
+        max-width: 60px;
+        /* 이미지의 최대 너비 설정 */
+        height: auto;
+        margin: 20px 10px;
+        /* 이미지 사이의 간격을 위해 마진 추가 */
+    }
+
+    h1 {
+        text-align: center;
+        /* 게임 제목 가운데 정렬 */
+        margin: 5px 0;
+        /* 제목 상단과 하단에 마진 추가 */
+    }
+
+
+    /* bigborder2의 상단에 마진 추가하여 간격 조정 */
+    .bigborder2 {
+        display: flex;
+        /* 플렉스 컨테이너로 만듭니다. */
+        justify-content: center;
+        flex-wrap: wrap;
+        /* 필요할 때 항목이 다음 행으로 랩핑되도록 합니다. */
+    }
+
+    /* 이미지 크기를 bigborder2 내에 맞게 줄임 */
+    .img_ad2,
+    .img_gm {
+        max-width: 100%;
+        /* 최대 너비를 100%로 설정 */
+        max-height: 200px;
+        /* 필요에 따라 최대 높이를 조정하세요. */
+    }
+
+    .center_meddal {
+        display: flex;
+        /* 플렉스 컨테이너로 만듭니다. */
+        justify-content: space-between;
+        /* 항목을 가로로 정렬하고 사이 간격을 추가합니다. */
+        align-items: center;
+        /* 항목을 수직으로 가운데 정렬합니다. */
+        width: 100%;
+        height: 600px;
+    }

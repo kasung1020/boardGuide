@@ -1,0 +1,124 @@
+.bigpicture_gametop3 {
+    width: 1200px;
+    height: 600px;
+}
+
+.bigborder_gametop3 {
+    width: 1200px;
+    height: 600px;
+    margin-top: 10px;
+    border-radius: 7px;
+    border: 1px solid black;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.content-container .top3_title2 {
+    font-weight: bold;
+    color: #000;
+    font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+    position: relative;
+    display: inline-block; /* inline-block으로 변경 */
+    line-height: 1.2; /* 텍스트의 라인 높이 조정 */
+    
+}
+
+.crown_img4 {
+    width: 65px;
+    height: 65px;
+    position: relative;
+    top: 12px;
+    left: 2px;
+}
+
+.center_meddal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    gap: 80px;
+    position: relative;
+}
+
+.img_ad2 {
+    max-width: 150px;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+.center_img {
+    display: flex;
+    justify-content: space-between; /* 각 카드 사이에 동일한 간격을 만듭니다. */
+    align-items: center;
+    width: 1200px;
+    margin-top: 30px;
+    padding: 0 20px; /* 양쪽에 약간의 패딩을 추가하여 카드가 박스 경계에 닿지 않도록 합니다. */
+}
+
+.game-card {
+    flex: 1; /* 각 게임 카드가 동일한 너비를 차지하도록 합니다. */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* 위치를 조정하기 위해 상대 위치로 설정합니다. */
+}
+
+.img_gm:hover {
+    transform: scale(1.05); /* 호버 시 약간 확대 */
+}
+
+.game-card .img_gm {
+    max-width: 300px;
+    min-width: 210px;
+    height: 250px;
+    margin-bottom: 25px; /* 그림과 메달 간의 간격을 조금 늘립니다. */
+    position: relative;
+    top: 120px; /* 그림의 위치를 조금 더 아래로 내립니다. */
+    z-index: 0;
+    transition: transform 0.3s ease-in-out; /* 호버 효과용 */
+}
+
+.game-card h1 {
+    text-align: center;
+    font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+    color: #000;
+    font-size: 24px;
+    position: relative;  /* 상대적 위치를 설정합니다. */
+    top: 90px;  /* top 값을 초기화하여 그림 아래에 위치하도록 합니다. */
+    width: 100%;
+    margin-top: 20px; /* 그림과의 간격을 주기 위해 마진 값을 추가합니다. */
+    z-index: 2;  /* z-index 값을 조정하여 메달 위에 텍스트가 오도록 합니다. */
+}
+
+/* 메달 위치 조정 */
+.game-card .medal{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    z-index: 1;
+    max-width: 150px;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.2)); /* 그림자 효과 */
+}
+
+/* 게임 카드 위에 메달을 추가 */
+.center_img .game-card:nth-child(1) .medal {
+    top: 15%;
+}
+
+.center_img .game-card:nth-child(2) .medal {
+    top: 15%;
+}
+
+.center_img .game-card:nth-child(3) .medal {
+    top: 15%;
+}

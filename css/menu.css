@@ -1,0 +1,231 @@
+@charset "utf-8"; 
+/* 한글 지원 */
+
+/* nav 안에 menu 메뉴 큰 박스 */
+.menu {
+    font-size: 18px;
+}
+
+.menu__item {
+    height: 50px;
+    display: inline-block;
+    white-space: nowrap;
+    /* margin-right: 50px; */
+    /* 줄바꿈 막기용 */                                                                   
+}
+
+.menu_item_support{
+    display: inline-block;
+    white-space: nowrap;
+}
+.menu__link {
+    padding: 0;
+}
+
+.menu_header_div{
+    margin: 0px;
+}
+
+/* 마우스 갔다 댔을때 효과 */
+.menu__link:hover .menu__first-word,
+.menu__link:focus .menu__first-word {
+    transform: translate3d(0, -105%, 0);
+}
+
+/* 마우스 갔다 댔을때 효과 */
+.menu__link:hover .menu__second-word,
+.menu__link:focus .menu__second-word {
+    transform: translate3d(0, 105%, 0);
+}
+
+/* 메뉴 바뀌는거 감추게 하기 */
+.menu__title {
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* 첫번째 단어 위치 3초  */
+.menu__first-word,
+.menu__second-word {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+/* 두번째 단어 위치 및 단어 지정 */
+.menu__first-word::before,
+.menu__second-word::before {
+    /* 바뀌는 단어 위치 정하기 지정은 상대적으로 */
+    position: absolute;
+    /* 단어 지정은 data = ~ 입력 */
+    content: attr(data-hover);
+}
+
+
+/* 첫번째 단어 색 */
+.menu__first-word {
+    color: #0c8040;
+}
+
+/* 첫번째 단어 바뀌는 색 */
+.menu__first-word::before {
+    top: 105%;
+    color: #000;
+}
+
+/* 두번째 단어 색 */
+.menu__second-word {
+    color: #000;
+}
+
+/* 두번째 단어 바뀌는 색 */
+.menu__second-word::before {
+    bottom: 105%;
+    color: #0c8040;
+}
+
+/* 메뉴판 설정 값 */
+.menu>li {
+    float: left;
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+    color: #000;
+    transition: all 0.4s;
+    position: relative;
+    font-size: 18px;
+    /* border: 1px solid black;
+    border-radius: 35px; */
+}
+
+/* 메뉴판 안에 요소 설정 값 */
+.submenu{
+    display: none;
+    transition: all 0.001s;
+    position: absolute;
+    width: 200px;
+    background-color: rgba(28,28,28,0.9);
+    /* 선택지 2 */
+    /* background-color: rgba(255,255,255,0.9); */
+    z-index: 20;
+    border-radius: 5px;
+}
+
+.submenu a{
+    color: white;
+    font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+}
+
+/* 메뉴판 마우스 갔다 댔을때 */
+.submenu li:hover{
+    /* 메뉴바 열어서 그 안에 있는 요소 마우스 댔을때 색 */
+    background-color: hsla(357, 100%, 59%, 0.89);
+    /* 선택지 2 */
+    /* background-color: #e5e7eb; */
+    border-radius: 5px;
+}
+
+/* 메뉴판 요소 안에 글씨 색깔 */
+nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    /* 선택지 2 */
+    /* color: #000; */
+}
+
+/* 이미지 설정 값 */
+.crown_img{
+    position: absolute;
+    width:30px;
+    height: 30px;
+    top: 58px;
+}
+
+/* 꺽쇄 아이콘 이동 */
+.menu li a i.fas.fa-angle-down {
+    position: relative;
+    left: 20px;
+    top: -18px;
+    margin: 0px;
+    color: #000;
+}
+
+.menu li a i.fas.fa-angle-right {
+    position: relative;
+    transform: rotate(90deg);
+    left: 20px;
+    top: -18px;
+    margin: 0px;
+    color: #000;
+}
+
+/* 도움말 위치 조정 값 */
+#support_tag_right{
+    position: relative;
+    /* padding-left: 10px; */
+    color: #000;
+}
+
+#submenu_support {
+    top: 69px;
+}
+
+
+/* 화살표 위치 조정 값 */
+#angle-right {
+    position: relative;
+    left: 35px;
+    top: 0px;
+}
+
+
+/* 검색 박스 스타일 설정 */
+.search_box {
+    float: right;
+    position: relative;
+    /* 검색 버튼을 위한 상대 위치 설정 */
+    /* padding-left: 1.75rem;
+    padding-right: 5rem; */
+    margin-right: 10px;
+}
+
+.search_box input {
+    width: 210px;
+    height: 50px;
+    padding: 0px;
+    border-radius: 30px;
+    border: 1px solid #888888;
+    font-size: 18px;
+    outline: none;
+    background: #F5F5F6;
+    padding-left: 20px;
+    color: #000;
+}
+
+.search_box input.text-input {
+    padding-left: 10px; /* 이 값은 원하는 출발 지점에 따라 조절할 수 있습니다. */
+}
+
+.search_box input::placeholder {
+    padding-left: 0px;
+}
+
+/* 검색 버튼 스타일 설정 */
+.search_box button,
+.search_box .search_btn {
+    position: absolute;
+    /* top: 28px; */
+    width: 40px;
+    height: 100%;
+    /* transform: translateY(-50%); */
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+}
+
+/* .fas.fa-search {
+     transform: rotate(90deg);
+} */
+
+

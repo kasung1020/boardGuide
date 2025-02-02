@@ -1,0 +1,106 @@
+table {
+    border-collapse: collapse;
+}
+
+.article {
+    text-align: center;
+    color: black;
+    padding: 11px 12px;
+    height: 16px;
+    border-bottom: 1px solid #181717f5;
+}
+
+.article_title {
+    text-align: left;
+    width: 600px;
+    color: black;
+    padding: 11px 12px;
+    height: 16px;
+    border-bottom: 1px solid #181717f5;
+}
+
+.pages input:nth-child(n) {
+    /* background-color: #caac7d; */
+    margin-right: 10px;
+    background-color: white;
+    font-size: 16px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.top_buttons {
+    text-decoration: none;
+    border: 1px solid #424242;
+    border-radius: 2px;
+    padding: 1px 10px;
+    color: #686868;
+}
+
+.wt2 {
+    padding: 11px 12px;
+    height: 16px;
+    border-bottom: 1px solid #6e6e6ee3;
+    width: 110px;
+}
+
+.search select:nth-child(n) {
+    /* background-color: #caac7d; */
+    height: 30px;
+    font-size: 16px;
+}
+
+.search input:nth-child(n) {
+    /* background-color: #caac7d; */
+    background-color: white;
+    font-size: 16px;
+    height: 30px;
+}
+
+.search button {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+}
+
+/* .paging_2 스타일 수정 */
+.pages {
+    position: relative;
+    list-style: none;
+    margin: 10px 0 10px 0;
+    width: 100%;
+}
+
+.pages li {
+    display: inline-block;
+    margin: 0 5px; /* 기존의 margin 제거 */
+    font-size: 16px;
+}
+
+.pages li a.pre-btn,
+.pages li a.next-btn {
+    width: auto;
+    height: auto;
+    line-height: inherit;
+}
+
+.pages li a {
+    display: block;
+    width: 18px;
+    height: 28px;
+    text-align: center;
+    transition: all 0.3s;
+    line-height: 28px;
+}
+
+.pages li a.on {
+    width: 28px;
+    height: 28px;
+    font-weight: bold;
+    color: #4b7fd8;
+    border: 1px solid #9b9a9a;
+}
+
+.pages li a:hover {
+    color: #4b7fd8; /* Hover Color Effect */
+    transform: translateY(-3px); /* Slight Move Up effect on hover */
+}

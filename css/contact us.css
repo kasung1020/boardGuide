@@ -1,0 +1,143 @@
+#contact_autoheight{
+    height: auto;
+    background-image: url(https://www.privy.com/hubfs/Background%20Patterns/dotBackground.svg);
+    background-size: auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+#contact_autoheight #contact-main-box{
+    height: 640px;
+}
+
+.contact-main{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 620px;
+    border-radius: 10px;
+}
+
+.right-container {
+    width: 50%; /* 혹은 원하는 비율 */
+}
+
+.contact-main h1 {
+    text-align: center;
+    color: #222;
+    font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+    padding: 20px 0px;
+}
+
+.border_1{
+    width: 100px;
+    height: 10px;
+    margin: 40px auto;
+}
+
+#contact-form-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 40px 0 rgba(0,0,0,.15);
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+}
+
+.contact-form{
+    width: 500px;
+    overflow: hidden;
+    height: 520px;
+}
+
+.contact-form label{
+    font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+    font-size: 14px;
+    color: black;
+}
+
+.contact-form-text {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background: #E8E8E8;
+    outline: none;
+    color: black;
+    transition: 0.5s;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    resize: none;
+}
+
+.button-container {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.dd1 {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.contact-form-text:focus, .contact-form-btn:focus, .dd1:focus {
+    border-color: #005dbf;
+}
+
+.contact-form input[type=submit] {
+    background-color: #007BFF;
+    width: 20%;
+    color: #fff;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+}
+
+.contact-form-btn:hover{
+    background: #0056b3;
+}
+
+/* 왼쪽 */
+
+.contact-main .left-container {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+}
+
+.left-container .contact-left_left{
+    margin-bottom: 104px;
+}
+
+.contact_box h1,p,span{
+    font-family: 'Noto Sans KR', 'Montserrat', 'sans-serif';
+    color: #000;
+}
+
+.contact_box h1{
+    font-size: 48.83px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.contact_box #contact_us_link{
+    color: #007bff;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', 'Montserrat', 'sans-serif';
+}

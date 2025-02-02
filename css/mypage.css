@@ -1,0 +1,318 @@
+        .mypage-text{
+            color: black;
+            font-size: 32px;    
+            text-align: center;
+        }
+
+        .mypage-container {
+            max-width: 700px;
+            margin: 65px auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px 0 rgba(0,0,0,.15);
+            padding: 20px;
+            box-sizing: border-box;
+            height: 520px;
+        }
+
+        /* 1. rgb 112 156 255 2. 134 149 230 3. 197 154 236*/
+
+        .board_wrap12 {
+            width: 1000px;
+            margin: 100px auto;
+        }
+
+        .bt_wrap12 {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0;
+        }
+
+        .bt_wrap12 input {
+            display: inline-block;
+            min-width: 80px;
+            margin-left: 10px;
+            padding: 10px;
+            border-radius: 2px;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .bt_wrap12 input:first-child {
+            margin-left: 0;
+        }
+
+        .bt_wrap12 input.on {
+            background: #5754549e;
+            color: #fff;
+        }
+
+
+        .board_write1 .title1,
+        .board_write1 .info1 {
+            padding: 15px;
+        }
+
+        .board_write1 .info1 {
+            font-size: 0;
+        }
+
+        .board_write1 .title1 dl {
+            font-size: 0;
+        }
+
+        .board_write1 .info1 dl {
+            display: inline-block;
+            width: 50%;
+            vertical-align: middle;
+        }
+
+        .board_write1 .title1 dt,
+        .board_write1 .title1 dd,
+        .board_write1 .info1 dt,
+        .board_write1 .info1 dd {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 1.4rem;
+        }
+
+        .board_write12 .title1 dt,
+        .board_write12 .info1 dt {
+            width: 100px;
+        }
+
+        .board_write12 .title1 dd {
+            width: calc(100% - 100px);
+        }
+
+        .board_write12 .title1 input[type="text"],
+        .board_write12 .info1 input[type="text"],
+        .board_write12 .info1 input[type="password"] {
+            padding: 10px;
+            box-sizing: border-box;
+            color: #000;
+        }
+
+        .board_write12 .title1 input[type="text"] {
+            width: 752px;
+        }
+
+
+        .board_write12 .cont textarea {
+            display: block;
+            width: 100%;
+            height: 300px;
+            padding: 15px;
+            box-sizing: border-box;
+            border: 0;
+            resize: none;
+            color: #000;
+        }
+        .board_wrap12 {
+            width: 1000px;
+            margin: 100px auto;
+        }
+
+        .bt_wrap12 {
+            margin-top: 33px;
+            text-align: center;
+            font-size: 0;
+        }
+
+        .bt_wrap12 input {
+            display: inline-block;
+            min-width: 80px;
+            margin-left: 10px;
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 2px;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .bt_wrap12 input:first-child {
+            margin-left: 0;
+        }
+
+        .bt_wrap12 input.on {
+            background: #5754549e;
+            color: #fff;
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        }
+
+
+
+
+
+
+        .board_write12 .title1,
+        .board_write12 .info1 {
+            padding: 15px;
+        }
+
+        .board_write12 .info1 {
+            font-size: 0;
+        }
+
+        .board_write12 .title1 dl {
+            font-size: 0;
+        }
+
+        .board_write12 .info1 dl {
+            display: inline-block;
+            width: 50%;
+            vertical-align: middle;
+        }
+
+        .board_write12 .title1 dt,
+        .board_write12 .title1 dd,
+        .board_write12 .info1 dt,
+        .board_write12 .info1 dd {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 1.4rem;
+        }
+
+        .board_write12 .title1 dt,
+        .board_write12 .info1 dt {
+            width: 100px;
+        }
+
+        .board_write12 .title1 dd {
+            width: calc(100% - 100px);
+        }
+
+        .board_write12 .title1 input[type="text"],
+        .board_write12 .info1 input[type="text"],
+        .board_write12 .info1 input[type="password"] {
+            padding: 10px;
+            box-sizing: border-box;
+            color: #000;
+            width: 300px;
+        }
+
+        .board_write12 .title1 input[type="text"] {
+            width: 300px;
+        }
+
+
+        .contact-form label1 {
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+            font-size: 14px;
+            color: black;
+        }
+
+        .contact-form-text1 {
+            display: block;
+            margin: 16px auto; /* 위아래 여백을 설정하고 좌우 여백을 auto로 설정하여 수평 가운데 정렬 */
+            border: 0;
+            outline: none;
+            color: black;
+            transition: 0.5s;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left; /* 왼쪽 정렬으로 수정 */
+            width: 210px;
+
+        }
+
+
+        .contact-form1 {
+            overflow: hidden;
+
+        }
+
+        /* 추가된 스타일을 입력해주세요 */
+        .input-group {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* 수평 가운데 정렬을 추가 */
+        }
+
+        .input-group label {
+            /* margin-right: 20px; */
+            text-align: right; /* 텍스트를 오른쪽 정렬로 수정 */
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+            color: black;
+            /* margin-left: 150px; */
+        }
+
+        .mypage_icon{
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+            margin-left: 128.734px;
+        }
+
+        .mypage_icon2{
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
+            margin-left: 128.734px;
+        }
+
+        .mypage_icon3{
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
+            margin-left: 128.734px;
+        }
+
+        .input-group input {
+            display: block;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-left: 0;
+            width: 200px; /* 필요에 따라 너비 조절 */
+        }
+
+        .user-info h1 {
+            margin-right: 20px;
+            font-size: 24px;
+        }
+
+        /* 이미지와 입력란 사이의 간격을 줄임 */
+        .contact-form1 {
+            margin-top: 10px; /* 이미지와 입력란 사이의 상단 간격을 조절 */
+        }
+
+        .user-info {
+            display: block;
+            margin: 30px 35px; /* 좌우 간격을 조절할 margin 추가 */
+            text-align: center;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            height: 85px;
+          }
+          
+          
+          .custom-button {
+            /* 원하는 버튼 스타일을 정의하십시오. */
+            background-color: rgba(112,156,255);
+            color: white;
+            border: none;
+            padding: 11px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            margin-right: 105px;
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+          }
+          
+          .custom-button1 {
+            /* 원하는 버튼 스타일을 정의하십시오. */
+            background-color: rgba(112,156,255);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 7px;
+            margin-top: 15px;
+            font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+          }

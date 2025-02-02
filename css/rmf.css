@@ -1,0 +1,328 @@
+
+ul, li {
+    list-style: none;
+}
+
+input {
+    text-decoration: none;
+    color: inherit;
+}
+
+.board_wrap1 {
+    width: 1000px;
+    margin: 100px auto;
+}
+
+.board_title1 {
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+.board_title1 strong {
+    font-size: 3rem;
+}
+
+.board_title1 p {
+    margin-top: 5px;
+    font-size: 1.4rem;
+}
+
+.bt_wrap1 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+}
+
+.bt_wrap1 input[type=submit]{
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.bt_wrap1 input {
+    display: inline-block;
+    min-width: 10   5px;
+    margin-left: 12px;
+    padding: 10px 20px;
+    border: 1px solid #888888;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+}
+
+.bt_wrap1 input:first-child {
+    margin-left: 0;
+}
+
+.bt_wrap1 input[type=button] {
+    background: #fff;
+    color: #000;
+}
+
+.board_list1 {
+    width: 100%;
+    border-top: 1px solid #000;
+}
+
+.board_list1 > div {
+    border-bottom: 1px solid #ddd;
+    font-size: 0;
+}
+
+.board_list1 > div.top {
+    border-bottom: 1px solid #999;
+}
+
+.board_list1 > div:last-child {
+    border-bottom: 1px solid #000;
+}
+
+.board_list1 > div > div {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.board_list1 > div.top > div {
+    font-weight: 600;
+}
+
+.board_list1 .num {
+    width: 10%;
+}
+
+.board_list1 .title {
+    width: 60%;
+    text-align: left;
+}
+
+.board_list1 .top .title {
+    text-align: center;
+}
+
+.board_list1 .writer {
+    width: 10%;
+}
+
+.board_write1 .dd1 {
+    color: black;
+    margin: 0px 15px;
+}
+
+.board_list1 .date {
+    width: 10%;
+}
+
+.board_list1 .count {
+    width: 10%;
+}
+
+.board_page1 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+}
+
+.board_page1 a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    border-left: 0;
+    line-height: 100%;
+}
+
+.board_page1 input.bt {
+    padding-top: 10px;
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+}
+
+.board_page1 a.num {
+    padding-top: 9px;
+    font-size: 1.4rem;
+}
+
+.board_page1 a.num.on {
+    border-color: #000;
+    background: #000;
+    color: #fff;
+}
+
+.board_page1 a:first-child {
+    border-left: 1px solid #ddd;
+}
+
+.board_view1 {
+    width: 100%;
+    border-top: 2px solid #000;
+}
+
+.board_view1 .title {
+    padding: 20px 15px;
+    border-bottom: 1px dashed #ddd;
+    font-size: 2rem;
+}
+
+.board_view1 .info {
+    padding: 15px;
+    border-bottom: 1px solid #999;
+    font-size: 0;
+}
+
+.board_view1 .info dl {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.board_view1 .info dl:first-child {
+    padding-left: 0;
+}
+
+.board_view1 .info dl::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    display: block;
+    width: 1px;
+    height: 13px;
+    background: #ddd;
+}
+
+.board_view1 .info dl:first-child::before {
+    display: none;
+}
+
+.board_view1 .info dl dt,
+.board_view1 .info dl dd {
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+.board_view1 .info dl dd {
+    margin-left: 10px;
+    color: #777;
+}
+
+.board_view1 .cont {
+    padding: 15px;
+    border-bottom: 1px solid #000;
+    line-height: 160%;
+    font-size: 1.4rem;
+}
+
+/* 글쓰기 */
+.board_write1 {
+    border-top: 1px solid #000;
+}
+
+.board_write1 .rmf_title,
+.board_write1 .info {
+    padding: 15px;
+}
+
+.rmf_title label{
+    color: black; 
+    font-size: 16px;
+}
+
+.board_write1 .info {
+    border-top: 1px dashed #a19898;
+    border-bottom: 1px solid #000;
+    font-size: 0;
+}
+
+.board_write1 .info dl {
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+}
+
+.board_write1 .rmf_title dt,
+.board_write1 .rmf_title dd,
+.board_write1 .info dt,
+.board_write1 .info dd {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.4rem;
+}
+
+.board_write1 .rmf_title dt,
+.board_write1 .info dt {
+    width: 100px;
+}
+
+.board_write1 .rmf_title input[type="text"],
+.board_write1 .info input[type="text"],
+.board_write1 .info input[type="password"] {
+    padding: 10px 5px;
+    box-sizing: border-box;
+    color: #000;
+}
+
+.board_write1 .rmf_title input[type="text"]{
+    padding: 10px;
+    box-sizing: border-box;
+    color: #000;
+}
+
+
+.board_write1 .info input[type="password"] {
+    max-width: 167px;
+    width: 167px;
+}
+
+.board_write1 .rmf_title input[type="text"] {
+    width: 450px;
+    outline: 0;
+    border:1px solid #bfbfbf;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.cont label{
+    color: black; 
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+.board_write1 .rmf_title dt,
+.board_write1 .rmf_title dd {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.4rem;
+}
+
+.title label{
+    color: black; 
+    font-size: 16px;
+}
+
+.board_write1 .title{
+    padding: 15px;
+}
+
+.board_write1 .cont{
+    width: 1170px;
+}
+
+.tox:not([dir=rtl]) {
+    margin-top: 10px;
+}
+
+.tox .tox-mbtn {
+    width: 58px;
+}
+
+.tox-tinymce {
+    border : 1px solid #bfbfbf !important;
+}

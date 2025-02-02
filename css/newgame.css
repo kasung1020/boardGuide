@@ -1,0 +1,107 @@
+/* .big_box_1 스타일 유지 */
+#big_box_1 {
+    border: 1px solid black;
+    background-color: white;
+    font-size: 1em;
+    line-height: 1.25;
+    color: #000;
+    border-radius: 4px;
+    width: 1200px;
+    padding: 10px 20px; /* 좌우 패딩 20px로 변경 */
+    -webkit-text-size-adjust: auto;
+    box-sizing: border-box; /* box-sizing을 border-box로 변경하여 패딩을 포함시킴 */
+    height: 1250px;
+}
+
+/* .box_2 스타일 수정 */
+.box_2 {
+    display: flex; /* flex 컨테이너로 설정 */
+    flex-wrap: wrap; /* 요소들을 한 줄에 나열하되 넘칠 경우 다음 줄로 감 */
+    justify-content: space-between; /* 요소들을 좌우로 고르게 분산 정렬 */
+    margin: 0 -5px; /* 좌우 간격을 상쇄하기 위해 음수 margin 설정 */
+}
+
+/* .box_2 li 스타일 수정 */
+.box_2 li {
+    margin: 5px 30px 10px 30px; /* 상하 5px, 좌우 5px 간격을 줌, 중간 간격을 더 크게 조절 */
+    vertical-align: top;
+    box-sizing: border-box; /* box-sizing을 border-box로 변경하여 패딩을 포함시킴 */
+}
+
+/* h2 스타일 수정 */
+#big_box_1 h2 {
+    margin-top: 10px;
+    color: #000;
+    font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+}
+
+/* paging_box 스타일 수정 */
+.paging_box {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin: 0 0 10px 0;
+}
+
+/* .paging_2 스타일 수정 */
+.paging_1 {
+    list-style: none;
+    margin: 10px 0 10px 0;
+    width: 100%;
+}
+
+.paging_1 li {
+    display: inline-block;
+    margin: 0 5px; /* 기존의 margin 제거 */
+    font-size: 16px;
+}
+
+.paging_1 li a.pre-btn,
+.paging_1 li a.next-btn {
+    width: auto;
+    height: auto;
+    line-height: inherit;
+}
+
+.paging_1 li a {
+    display: block;
+    width: 18px;
+    height: 28px;
+    text-align: center;
+    transition: all 0.3s;
+    line-height: 28px;
+}
+
+.paging_1 li a.on {
+    width: 28px;
+    height: 28px;
+    font-weight: bold;
+    color: #4b7fd8;
+    border: 1px solid #9b9a9a;
+}
+
+.paging_1 li a:hover {
+    color: #4b7fd8; /* Hover Color Effect */
+    transform: translateY(-3px); /* Slight Move Up effect on hover */
+}
+
+.position-fixed {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 이거 웬만하면 newgamecss 포함 안 시키는게 좋을듯 */
+/* 이 코드 때문에 다른거까지 꼬일 수 있음 */
+
+/* h2 스타일 수정 */
+.big_box_1 h2 {
+    text-align: center; 
+    padding-top: 50px; 
+    color: #000;
+}
+
+.info > p{
+    font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+    color: #000;
+}

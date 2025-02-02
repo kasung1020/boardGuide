@@ -1,0 +1,493 @@
+    /* 기본 스타일 */
+    * {
+        box-sizing: border-box;
+        margin: 0 auto;
+        font-family: "맑은 고딕";
+        color: #888888;
+        list-style: none;
+        border: 0;
+        padding: 0;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        height: 100%;
+        /* 후보 2 */
+    }
+
+    .all {
+        width: 100%;
+    }
+
+    .wrap {
+        width: 1200px;
+    }
+
+    /*@media (max-width: 1440px) {
+        body {
+            transform: scale(0.9); 
+            transform-origin: top left;
+        }
+    }*/
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        /* 링크 탔을때와 안 탔을때 색 똑같이 정확히는 부모 색을 따라감 */
+    }
+
+    /* 광고배너 */
+    #ads {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;  /* 상위 요소를 relative로 설정 */
+    }
+
+    /* 카드 이미지 */
+    .img_ad {
+        border: none;
+        /* 모든 border 속성을 단순화 */
+        height: 100%;
+        display: block;
+        /* 이미지 아래의 기본 여백 제거 */
+        width: 100%;
+    }
+
+    /* 앞면 이미지 출력 */
+    .ads_front .img_ad {
+        object-fit: contain;
+    }
+
+    /* 카드 담을 박스 크기 */
+    .flip {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        perspective: 1100px;
+        margin: 0px 0px 20px 0px;
+        float: left;
+        cursor: pointer;
+    }
+
+    /* 카드 크기 */
+    .ads_card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: .4s;
+        transform-style: preserve-3d;
+    }
+
+    /* X아이콘 */
+    .close-all {
+        margin : 0px 10px;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        z-index: 10;  /* 다른 요소들 위에 나타나도록 z-index 설정 */
+        position: relative;  /* position을 relative로 설정 */
+        top: -77px;  /* 원하는 위치만큼 위로 옮깁니다 */
+        opacity: 0;  /* 초기 투명도 설정 */
+        transition: opacity 0.5s ease-in-out;  /* 애니메이션 효과 추가 */
+    }
+
+    /* 카드 앞뒤 박스 */
+    .ads_front,
+    .ads_back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+
+    .ads_back {
+        transform: rotateY(180deg);
+    }
+
+    /* .flip:hover .ads_card {
+        transform: rotateY(180deg);
+        transition-delay: 2s;
+        필요없어졌음 일단 혹시 몰라서 안 지우고 나둠
+    } */
+
+    /* 메인 */
+    main {
+        height: 670px;
+        /* 중간 크기 화면부터 적용될 패딩 값 */
+        /* 흰색 배경색 */
+    }
+
+    main div.rank {
+        height: 300px;
+        /* padding: 3px; */
+        display: block;
+        /* margin-bottom: -30px; */
+        /* max-width: 1650px; */
+    }
+
+    main div #ranktitle {
+        margin: 15px 11px 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        color: #000;
+        font-weight: bold;
+        /* font-family: 'nanumgothic'; */
+    }
+
+    /* 메인 큰 content */
+    .bigpicture {
+        width: 1200px;
+        height: 670px;
+        border-radius: 7px;
+        border: 1px solid black;
+        flex-wrap: wrap;
+        /* 요소들이 감싸지도록 설정 */
+    }
+
+    /* 아이콘 여기서부터 */
+    .arrow-link {
+        display: inline-flex;
+        flex-shrink: 0;
+        align-items: center;
+        font-weight: 400;
+        /* line-height: 1; */
+        /* color: inherit; */
+        /* opacity: .75; */
+        vertical-align: middle;
+        text-decoration: none;
+        margin-right: 15px;
+        font-size: 20px;
+    }
+
+    .arrow-link fa-icon {
+        margin-left: 0.3em;
+        font-size: .65em;
+    }
+
+    svg:not(:root).svg-inline--fa,
+    svg:not(:host).svg-inline--fa {
+        overflow: visible;
+        box-sizing: content-box;
+    }
+
+    .svg-inline--fa {
+        display: inline-block;
+        height: 1em;
+        overflow: visible;
+        vertical-align: -0.125em;
+    }
+
+    /* 아이콘 여기까지 */
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+    /* 인기순위 아이템 */
+    div {
+        display: block;
+    }
+
+    .ranktoday-wrapper-main {
+        width: 1200px;
+        height: 230px;
+        /* border: 1px solid #000; */
+        /* 경계선을 표시하기 위해 추가한 코드입니다. 필요에 따라 삭제하셔도 됩니다. */
+        box-sizing: border-box;
+        display: flex;
+    }
+
+    .main-game-listing {
+        margin-bottom: 30px;
+        margin: 0px 0px 0px 20px;
+        display: flex;
+        box-sizing: border-box;
+        gap: 28px;
+    }
+
+    .game-listing-wrapper {
+        display: block;
+        flex: 1;
+        color: #000;
+        /* margin-right: 20px; */
+        text-decoration: none;
+    }
+
+    .game-listing {
+        box-sizing: border-box;
+        width: 170px;
+    }
+
+    .game-listing-thumb {
+        width: 100%;
+        height: 170px;
+        overflow: hidden;
+        border: 1px solid #d7d7d7;
+        background-size: 100%;
+        transition: 0.2s ease-in;
+        border-radius: 10px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .board-listing-rank {
+        color: #000;
+        box-sizing: border-box;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        font-size: 45px;
+        width: 50px;
+        margin: 0px;
+    }
+
+    .game-listing .game-listing-title {
+        color: #000;
+        font-size: 15px;
+        margin: 12px 0px 5px;
+        font-weight: bold;
+    }
+
+    .new-ellip {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        /* 몇줄까지 표시할지 */
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+
+    .text-wrapper {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* transform: translateX(10px); */
+    }
+
+    .game-listing-title .new-ellip,
+    .game-listing-info.new-ellip {
+        font-family: 'nanumgothic';
+        color: #000;
+        width: 120px;
+        font-size: 15px;
+        word-break: break-all;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+
+    /* 이미지슬라이드 */
+    #img_slide {
+        width: 400px;
+        height: 330px;
+        float: left;
+    }
+
+    .slide {
+        overflow: hidden;
+        height: 330px;
+        position: relative;
+    }
+
+    .slide img {
+        position: absolute;
+        width: 100%;
+        height: 330px;
+        /* transition: all 1s; */
+        transition: opacity 1s ease-in-out;
+    }
+
+    /*인기글 부분*/
+    .section {
+        height: 330px;
+        margin: 0px 20px;
+        /* 두 박스 사이에 간격을 주기 위해 마진 추가 */
+        box-sizing: border-box;
+        /* 패딩 및 테두리가 전체 너비에 포함되도록 설정 */
+        position: relative;
+        max-height: 330px;
+        float: left;
+    }
+
+    .aside {
+        height: 330px;
+        margin: 0px 20px;
+        /* 두 박스 사이에 간격을 주기 위해 마진 추가 */
+        box-sizing: border-box;
+        max-height: 330px;
+        float: right;
+    }
+
+    .section tr:nth-child(2n+1) {
+        /* background-color: #caac7d; */
+        background-color: rgba(202, 172, 125, 0.3);
+    }
+
+    .aside tr:nth-child(2n+1) {
+        /* background-color: #caac7d; */
+        background-color: rgba(202, 172, 125, 0.3);
+    }
+
+    .section tr .title>a,
+    .aside tr .title>a {
+        color: #20124d;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    section>table,
+    aside>table {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 360px;
+    }
+
+    .wt {
+        padding: 12px 12px;
+        height: 16px;
+        border-bottom: 1px solid #6e6e6ee3;
+        width: 110px;
+    }
+
+    .writing {
+        padding: 12px 12px;
+        border-bottom: 1px solid #6e6e6ee3;
+        overflow: hidden;  /* 넘치는 부분을 숨깁니다 */
+    }
+    
+    .writing a{
+        display: block;
+        white-space: nowrap;  /* 텍스트를 한 줄로 만듭니다 */
+        overflow: hidden;     /* 넘치는 부분을 숨깁니다 */
+        text-overflow: ellipsis; /* 넘치는 부분을 ...으로 표시 */
+        max-width: 20ch;           /* 너비를 부모 요소의 100%로 설정 */
+        text-decoration: none;
+        color: #000; 
+        float: left;
+    }
+    
+    .wt a {
+        text-decoration: none;
+        color: #3d85c6;
+        width: 180px;
+    }
+
+    .title {
+        background-color: #dfdfdf;
+    }
+
+    /* 푸터 */
+    footer {
+        border-top: 1px solid #444343b9;
+        height: 100%;
+        margin: 0px;
+        margin-top: 20px;
+        background-color: #4a4948;
+        /* 아래 네줄은 있어도 되고 없어도 됌 */
+    }
+
+    #foot_div {
+        /* padding: 0 15px; */
+        /* display: flex; */
+        height: 120px;
+    }
+
+    .foot_div_big {
+        width: 1200px;
+        margin: 0;
+    }
+
+    .announcement {
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+        color: #fff;
+    }
+
+    .announcement a,
+    .announcement2 a {
+        text-decoration: none;
+        outline: none;
+        /* color: #000; */
+        width: 200px;
+        margin-right: 30px;
+        color: #fff;
+    }
+
+    .announcement2 {
+        padding: 20px 0px 0px 0px;
+    }
+
+    .announcement2>div {
+        margin: 0px;
+        border-right: 1px solid #fff;
+        float: left;
+    }
+
+    .announcement2 div:last-child {
+        border-right: none;
+    }
+
+    /* 이용약관. * 선택자 때문에 요소별로 색깔 다 지정해둠 */
+    #eula {
+        margin-top: 30px;
+        width: 1100px;
+    }
+
+    #eula h1 {
+        color: #424242;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+    }
+
+    #eula h2 {
+        color: #424242;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+    }
+
+    #eula h3 {
+        color: #424242;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+    }
+
+    .eula_font_black p{
+        color: #575454;
+    }
+
+    /* 게시판 */
+    #board {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        height: 100%;
+    }
+
+    /* 짝수 번째 글마다 회색 배경 처리 */
+    #board tr:nth-child(2n+5) {
+        background-color: rgba(228, 228, 228, .5);
+    }
+
+    /* 공지사항 */
+    #notice {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        height: 100%;
+    }
+
+    /* 짝수 번째 글마다 회색 배경 처리 */
+    #notice tr:nth-child(2n+3) {
+        background-color: rgba(228, 228, 228, .5);
+    }

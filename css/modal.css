@@ -1,0 +1,1000 @@
+    /* 모달 */
+    #menuModal {
+        width: 100%;
+        height: 100%;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        z-index: 9999;
+    }
+
+    #sitemap_body {
+        width: 40%;
+        max-width: 1000px;
+        height: 100%;
+        padding: 5% 5% 5% 5%;
+        background: #5166BF;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        transition: 0.3s ease-in-out;
+        position: fixed;
+    }
+
+    #sitemap_body>.sitemap_title {
+        font-size: 45px;
+        font-weight: 600;
+        font-family: 'Montserrat';
+        color: #FFFFFF;
+        padding-bottom: 25px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        max-width: 800px;
+    }
+
+    /* 모달 메뉴바 */
+    #sitemap_body>.deps1 {
+        margin-top: 30px;
+    }
+
+    .sitemap_body>.deps1>li {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #sitemap_body .deps1>li>a {
+        display: inline-block;
+        width: 100%;
+        /* min-width: 150px; */
+        font-size: 30px;
+        font-weight: 600;
+        color: #FFFFFF;
+        /* pointer-events: none; */
+        cursor: pointer;
+        position: relative;
+    }
+
+    #sitemap_body .deps1>li>a:before {
+        content: '+';
+        display: inline-block;
+        color: #fff;
+        /* 색상은 원하는대로 변경하실 수 있습니다. */
+        font-size: 24px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        cursor: pointer;
+    }
+
+    #sitemap_body .deps1>li.on>a:before {
+        content: '-';
+        /* +가 눌렸을 때 -로 변경됩니다. */
+    }
+
+    #sitemap_body .deps2 {
+        margin-left: 9px;
+        margin-top: 9px;
+        width: 100%;
+    }
+
+    #sitemap_body .deps2 a {
+        font-size: 19px;
+        color: rgba(255, 255, 255, 0.8);
+        position: relative;
+        transition: 0.3s ease-in-out;
+    }
+
+    #sitemap_body .deps2>li+li {
+        margin-top: 15px;
+    }
+
+    #sitemap_body .deps2>li+li .crown_img3 {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: -10px;
+    }
+
+    /* 두번째 서브바 */
+    #sitemap_body>.deps1>li+li {
+        margin-top: 5%;
+    }
+
+    #sitemap_body .deps1>li.no-toggle>a:before {
+        display: none;
+    }
+
+    /* 마지막 하단 모달 바 */
+    #sitemap_body .sitemap_bottom {
+        margin-top: 8%;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    #sitemap_body .sitemap_bottom a {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.8);
+        display: inline-block;
+        transition: 0.3s ease-in-out;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+    }
+
+    #sitemap_body .sitemap_bottom a+a {
+        margin-left: 40px;
+    }
+
+    #sitemap_body .sitemap_modal_close {
+        position: absolute;
+        color: #fff;
+        pointer-events: inherit;
+        top: 50px;
+        right: 60px;
+        cursor: pointer;
+        background: none;
+        z-index: 99;
+    }
+
+    #sitemap_body .sitemap_modal_close>i {
+        font-size: 35px;
+    }
+
+    /* 회원가입 모달 */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 99;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    #signUpModal>.modal_content {
+        background-color: #ffffff;
+        border: 1px solid #eee;
+        padding: 20px 40px;
+        width: 440px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        top: 50%;
+        /* 화면의 상단에서부터 50% 위치 */
+        left: 50%;
+        /* 화면의 왼쪽에서부터 50% 위치 */
+        transform: translate(-50%, -50%);
+        /* 요소의 크기의 50%만큼 옮기기 */
+    }
+
+    /* 닫기 버튼 Style */
+    .modal_content .modal_close_signup {
+        color: #555;
+        float: right;
+        font-size: 24px;
+        margin: -20px -20px 0 0;
+        background-color: #ffffff;
+        /* Set background color to white */
+        padding: 10px;
+        /* Add some padding */
+    }
+
+    .modal_content .modal_close_signup:hover,
+    .modal_content .modal_close_signup:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .modal_content .modal_title,
+    .modal_content .modal_step {
+        text-align: left;
+        /* Align text to left */
+    }
+
+    .modal_content .modal_title {
+        font-size: 20px;
+        /* Adjust font size */
+        font-weight: bold;
+        /* Make text bold */
+        color: #444444;
+        margin-bottom: 5px;
+        /* Adjust margin bottom */
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+    }
+
+    .modal_content .modal_step {
+        font-size: 16px;
+        /* Adjust font size */
+        color: #555555;
+        /* Adjust margin bottom */
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+    }
+
+    /* 인풋 바 Style */
+    #signUpForm input[type=text],
+    #signUpForm input[type=password],
+    #signUpForm input[type=email] {
+        width: 100%;
+        padding: 12px;
+        margin: 2px 0;
+        display: inline-block;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        border-radius: 8px;
+        font-size: 16px;
+        background: #F5F5F5;
+        color: #000;
+    }
+
+    /* 다음 버튼 Style */
+    #signUpForm button[type=button] {
+        background-color: #007bff;
+        color: white;
+        padding: 14px 20px;
+        margin: 14px 0px 2px 0px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    #signUpForm button[type=submit]:hover {
+        background-color: #0056b3;
+    }
+
+    /* 라벨 Label Style */
+    #signUpForm label {
+        padding: 12px 12px 10px 0;
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        font-size: 16px;
+        color: #444444;
+        /* Set text color to #444444 */
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+    }
+
+    .modal_content .modal_link {
+        color: #007bff;
+        /* Set text color to #007bff for consistency */
+        text-decoration: none;
+        font-size: 11.4px;
+        /* Adjusted font size for better fit and appearance */
+        font-family: 'Noto Sans KR', 'Montserrat', 'sans-serif';
+        display: inline-block;
+        /* Ensuring that underline applies only to text not full width */
+        margin-right: 3px;
+        /* Adjusting margin for better appearance */
+    }
+
+    .modal_content .modal_link:hover,
+    .modal_content .modal_link:focus {
+        color: #0056b3;
+        /* Set text color to #0056b3 on hover or focus for consistency */
+        text-decoration: underline;
+        /* Add underline text decoration on hover or focus */
+    }
+
+    .modal_content .modal_note {
+        font-size: 11.4px;
+        /* Adjusted font size for the note text */
+        margin-top: 5px;
+    }
+
+    .signUperror {
+        color: red;
+        display: none;
+        font-size: 12px;
+    }
+
+    .input-hint {
+        font-size: 10px;
+        color: grey;
+        position: absolute;
+        /* 추가: 절대 위치 지정 */
+        display: inline;
+        /* 이 부분 추가 */
+        right: 0;
+        /* 추가: 오른쪽 끝으로 이동 */
+        top: 50%;
+        /* 추가: 상위 요소의 중간 위치 */
+        transform: translateY(-50%);
+        /* 추가: 세로 중앙 정렬 */
+    }
+
+    /* 회원가입 2번째 선택 모달--------------- */
+
+    #preferenceModal>.modal_content {
+        background-color: #ffffff;
+        padding: 30px 50px;
+        width: 460px;
+        border-radius: 24px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #preferenceModal .modal_close_signup {
+        font-size: 30px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        background: inherit;
+        margin-top: -15px;
+    }
+
+    #preferenceModal .modal_close_signup:hover {
+        color: #0056b3;
+    }
+
+    #preferenceModal .modal_step,
+    #preferenceModal .modal_note,
+    #preferenceModal .modal_title,
+    #preferenceModal p {
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        text-align: left;
+        margin-bottom: 10px;
+        color: #302f2f;
+    }
+
+    #preferenceModal .modal_step {
+        font-size: 16px;
+        color: #555555;
+    }
+
+    #preferenceModal .modal_title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333333;
+    }
+
+    #preferenceModal button {
+        padding: 14px 20px;
+        margin-top: 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 12px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    #preferenceModal #completeSignUpBtn,
+    #preferenceModal #laterSignUpBtn {
+        width: 100%;
+    }
+
+    #preferenceModal #completeSignUpBtn[type=submit] {
+        background-color: #007bff;
+        color: white;
+        box-shadow: 4px 4px 8px #d1d1d1, -4px -4px 8px #ffffff;
+    }
+
+    #preferenceModal #completeSignUpBtn[type=submit]:hover {
+        background-color: #0056b3;
+    }
+
+    #laterSignUpBtn {
+        background-color: #d1d5da;
+        color: #333;
+        border-radius: 5px;
+    }
+
+    #laterSignUpBtn:hover {
+        background-color: #b4b9be;
+    }
+
+    #preferenceModal .modal_note {
+        font-size: 12px;
+        color: #888;
+        margin-top: 10px;
+    }
+
+    .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .button-group button {
+        color: #302f2f;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .button-group button.active {
+        background-color: #007bff;
+        color: white;
+    }
+
+    /* 로그인 모달  */
+
+    /* 닫기 버튼의 스타일 */
+    .modal_content .modal_close_login {
+        color: #555;
+        float: right;
+        font-size: 24px;
+        margin: -20px -20px 0 0;
+        background-color: #ffffff;
+        padding: 10px;
+    }
+
+    .modal_content .modal_close_login:hover,
+    .modal_content .modal_close_login:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* 로그인 에러 메시지 스타일 */
+    .modal_content .loginError {
+        color: red;
+        display: none;
+        /* 기본적으로 에러 메시지는 숨겨져 있습니다 */
+    }
+
+    /* 라벨과 입력 필드의 스타일 */
+    .modal_content label {
+        margin-bottom: 1px;
+    }
+
+
+    /* 라벨과 입력 필드의 스타일 */
+    #loginForm label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+        font-size: 16px;
+        color: #444444;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+    }
+
+    #loginForm input[type=text],
+    #loginForm input[type=password] {
+        width: 100%;
+        padding: 12px;
+        margin: 2px 0;
+        display: inline-block;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        border-radius: 8px;
+        font-size: 16px;
+        background: #F5F5F5;
+        color: #000;
+    }
+
+    /* 로그인 버튼의 스타일 */
+    #loginBtn {
+        background-color: #007bff;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        /* 이 부분을 추가 */
+    }
+
+    #loginBtn:active {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        /* 이 부분을 추가 */
+        transform: translateY(2px);
+        /* 이 부분을 추가 */
+    }
+
+    #loginBtn:hover {
+        background-color: #0056b3;
+    }
+
+    .modal_content .modal_link {
+        color: #007bff;
+    }
+
+    .modal_content .modal_link:hover,
+    .modal_content .modal_link:focus {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+    .modal_content .login_logo {
+        text-align: center;
+    }
+
+    .modal_content .login_logo img {
+        width: 70%;
+        max-width: 300px;
+        /* 추가: 이미지의 최대 크기를 200px로 제한 */
+    }
+
+    /* 모달 박스 Style */
+    #loginModal>.modal_content {
+        background-color: #ffffff;
+        margin: 10% auto;
+        padding: 20px 40px;
+        border: 1px solid #eee;
+        width: 440px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+
+    /* ----- 아이디 찾기 모달 -------------- */
+
+    #idFindModal {
+        display: none;
+    }
+
+    #idFindModal>.modal_content {
+        background-color: #ffffff;
+        margin: 10% auto;
+        padding: 20px 40px;
+        border: 1px solid #eee;
+        width: 440px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+
+    #idFindModal .modal_close_signup {
+        font-size: 30px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        background: inherit;
+        margin-top: -15px;
+    }
+
+    #idFindModal .modal_close_signup:hover {
+        color: #0056b3;
+    }
+
+    /* 아이디 찾기 에러 메시지 스타일 */
+    .modal_content .idFindError {
+        color: red;
+        display: none;
+        /* 기본적으로 에러 메시지는 숨겨져 있습니다 */
+    }
+
+    /* 아이디 찾기 입력 필드의 스타일 */
+    #idFindForm label,
+    #pwFindForm label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+        font-size: 16px;
+        color: #444444;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+    }
+
+    #idFindForm input[type=text],
+    #idFindForm input[type=email] {
+        width: 100%;
+        padding: 12px;
+        margin: 2px 0;
+        display: inline-block;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        border-radius: 8px;
+        font-size: 16px;
+        background: #F5F5F5;
+        color: #000;
+    }
+
+    /* 아이디 찾기 버튼의 스타일 */
+    #idFindBtn,
+    #pwFindBtn {
+        background-color: #007bff;
+        color: white;
+        padding: 14px 20px;
+        margin: 20px 0px 10px 0px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    #idFindBtn:active {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        transform: translateY(2px);
+    }
+
+    #idFindBtn:hover {
+        background-color: #0056b3;
+    }
+
+    .tab_list_wrap {
+        margin-bottom: 20px;
+    }
+
+    .tabs {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        /* 탭 아이템들을 가운데 정렬합니다 */
+        height: 43px;
+    }
+
+    .tab_item {
+        margin: 0px;
+        /* 탭 아이템 간 간격을 조절합니다 */
+    }
+
+    .tab_link {
+        padding: 10px 42px;
+        display: block;
+        color: #444;
+        text-decoration: none;
+        border-radius: 5px 5px 0 0;
+        /* 상단 왼쪽과 오른쪽 모서리를 둥글게 만듭니다 */
+        border: 1px solid #d5d5d5;
+        /* 테두리 스타일 추가 */
+        border-bottom: none;
+    }
+
+    .ui-tabs-active .tab_text {
+        color: white;
+    }
+
+    /* 활성화된 탭 스타일 */
+    .ui-tabs-active .tab_link {
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+        border-top: none;
+        /* 상단 테두리 제거 */
+        border-left: none;
+        /* 왼쪽 테두리 제거 */
+        border-right: none;
+        /* 오른쪽 테두리 제거 */
+        border-bottom: none;
+        /* 아래쪽 테두리 제거 */
+        padding-bottom: 12px;
+    }
+
+    /* 활성화되지 않은 탭에만 border-bottom 값을 추가 */
+    .tab_item:not(.ui-tabs-active) .tab_link {
+        border-bottom: 1px solid #d5d5d5;
+    }
+
+    /* 탭 아이템의 마우스 호버 스타일 */
+    .tab_item:not(.ui-tabs-active) .tab_link:hover {
+        background-color: #f0f0f0;
+    }
+
+    /* 탭 컨텐츠 스타일 */
+    #tabContentFindId,
+    #tabContentFindPw {
+        display: none;
+        /* 기본적으로 모든 탭 컨텐츠를 숨깁니다 */
+        /* ... 기존 스타일 ... */
+    }
+
+    /* 예를 들어 아이디 찾기 탭을 기본적으로 활성화하려면 */
+    #tabContentFindId {
+        display: block;
+    }
+
+    /* 비밀번호 찾기 */
+
+    /* 비밀번호 찾기 에러 메시지 스타일 */
+    .modal_content .pwFindError {
+        color: red;
+        display: none;
+        /* 기본적으로 에러 메시지는 숨겨져 있습니다 */
+    }
+
+    #pwFindForm input[type=text],
+    #pwFindForm input[type=email] {
+        width: 100%;
+        padding: 12px;
+        margin: 2px 0;
+        display: inline-block;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        border-radius: 8px;
+        font-size: 16px;
+        background: #F5F5F5;
+        color: #000;
+    }
+
+    /* 아이디 찾기 하면 뜨는 창 */
+    #findid {
+        display: none;
+    }
+
+    .findid_label h1 {
+        color: #000;
+        text-align: center;
+        margin-bottom: 25px;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        font-size: 18px;
+    }
+
+    #findid>.modal_content {
+        background-color: #ffffff;
+        margin: 15% auto;
+        padding: 20px 40px;
+        border: 1px solid #eee;
+        width: 440px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+
+    .findid_result_box {
+        text-align: center;
+    }
+
+    .findid_result_box i {
+        color: #5166BF;
+        font-size: 20px;
+    }
+
+    .findid_result_box .findidname {
+        margin-top: 4px;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        font-size: 18px;
+        color: #444444;
+    }
+
+    #tabFindId {
+        max-width: 360px;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    #FindidBack,
+    #FindidGo {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        margin: 20px 0px 10px 0px;
+        border: none;
+        cursor: pointer;
+        width: 165px;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    #FindidBack {
+        margin-right: 10px;
+    }
+
+    #idFindBtn:active {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        transform: translateY(2px);
+    }
+
+    #idFindBtn:hover {
+        background-color: #0056b3;
+    }
+
+    /* 비밀번호 찾기 인증 창 findpasswordeamil */
+    #findpasswordemail {
+        display: block;
+    }
+
+    .findpassword_label h1 {
+        color: #000;
+        text-align: center;
+        margin-bottom: 25px;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    #findpasswordemail>.modal_content {
+        background-color: #ffffff;
+        margin: 5% auto;
+        padding: 20px 40px;
+        border: 1px solid #eee;
+        width: 440px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+    
+    #newfindpasswordForm input[type=password] {
+        width: 100%;
+        padding: 12px;
+        margin: 2px 0;
+        display: inline-block;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        border-radius: 8px;
+        font-size: 16px;
+        background: #F5F5F5;
+        color: #000;
+    }
+
+    #newfindpasswordForm label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+        font-size: 16px;
+        color: #444444;
+        /* Set text color to #444444 */
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+    }
+
+    /* 회원탈퇴1 */
+    #userquit {
+        display: none;
+    }
+
+    .tab_list_wrap2 h1 {
+        color: #000;
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        font-size: 28px;
+    }
+
+    #userquit>.modal_content {
+        background-color: #ffffff;
+        margin: 14% auto;
+        padding: 20px 40px;
+        border: 1px solid #eee;
+        width: 440px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+
+    #userquit .modal_close_signup {
+        font-size: 30px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        background: inherit;
+        margin-top: -15px;
+    }
+
+    #userquit .modal_close_signup:hover {
+        color: #0056b3;
+    }
+
+    #passwordCheckForm input[type=password] {
+        width: 100%;
+        padding: 12px;
+        margin: 2px 0;
+        display: inline-block;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        border-radius: 8px;
+        font-size: 16px;
+        background: #F5F5F5;
+        color: #000;
+    }
+
+    /* 아이디 찾기 버튼의 스타일 */
+    #passwordCheckBtn{
+        background-color: #007bff;
+        color: white;
+        padding: 14px 20px;
+        margin: 20px 0px 10px 0px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    /* 아이디 찾기 입력 필드의 스타일 */
+    #passwordCheckForm label{
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+        font-size: 16px;
+        color: #444444;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+    }
+
+    #passwordCheckForm .passwordFindError {
+        color: red;
+        display: none;
+        /* 기본적으로 에러 메시지는 숨겨져 있습니다 */
+    }
+
+    /* 회원탈퇴3 */
+    #userquit5 {
+        display: none;
+    }
+
+    .tab_list_wrap2 h1 {
+        color: #000;
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        font-size: 28px;
+    }
+
+    #userquit5>.modal_content {
+        background-color: #ffffff;
+        margin: 14% auto;
+        padding: 20px 40px;
+        border: 1px solid #eee;
+        width: 440px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+
+    #userquit5 .modal_close_signup {
+        font-size: 30px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        background: inherit;
+        margin-top: -15px;
+    }
+
+    #userquit5 .modal_close_signup:hover {
+        color: #0056b3;
+    }
+
+    #passwordFindForm .confirmation-message {
+        text-align: center;
+    }
+
+    .confirmation-message .confirmation-label {
+        font-size: 18px;
+        color: #ff3d3d;
+        font-weight: bold;
+        display: block; /* 라벨을 블록 요소로 만들어 줄바꿈 처리 */
+        margin-bottom: 10px;
+    }
+
+    .confirmation-message p {
+        font-size: 14px;
+        color: #000;
+        margin-bottom: 10px;
+    }
+
+    #passwordFindForm .button-group2 {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .button-group2 #FindpasswordGo {
+        background-color: #e55c5c; /* 확인 버튼 색상 */
+        color: #fff;
+        padding: 10px 20px;
+        margin: 20px 5px 10px 0px;
+        border: none;
+        cursor: pointer;
+        width: 165px;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .button-group2 #FindpasswordBack {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        margin: 20px 0px 10px 5px;
+        border: none;
+        cursor: pointer;
+        width: 165px;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        font-family: 'Noto Sans KR', 'Montserrat', 'GmarketSans', 'sans-serif';
+    }
